@@ -1,0 +1,110 @@
+html {
+  background-color: rgb(0, 0, 0);
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
+    url('/fotos/Lucas 1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  text-shadow: 3px 3px rgb(114, 53, 53);
+  color: white;
+  font-size: 50px;
+  font-family: fantasy;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+h2 {
+  text-shadow: 3px 3px rgb(114, 39, 39);
+  color: white;
+  font-size: 20px;
+  font-family: fantasy;
+  text-align: center;
+  margin-top: 0;
+}
+
+a {
+  color: white;
+}
+
+.contacto {
+  color: red;
+}
+
+.piepagina {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #080808;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* === Carrusel === */
+
+.carousel {
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+.slides {
+  display: flex;
+  width: 300vw; /* 3 imágenes, cada una ocupa 100vw */
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  width: 100vw;
+  height: 400px; /* Ajustable */
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ocultar los radios */
+input[type="radio"] {
+  display: none;
+}
+
+/* Botones de navegación */
+.nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nav label {
+  cursor: pointer;
+  font-size: 30px;
+  padding: 5px;
+}
+
+/* Movimiento del carrusel */
+#slide1:checked ~ .carousel .slides {
+  transform: translateX(0);
+}
+#slide2:checked ~ .carousel .slides {
+  transform: translateX(-100vw);
+}
+#slide3:checked ~ .carousel .slides {
+  transform: translateX(-200vw);
+}
