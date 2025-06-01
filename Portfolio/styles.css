@@ -5,7 +5,7 @@ html{
 
 @font-face {
   font-family: 'balatro';
-  src: url('./fuentes/balatro.ttf') format('truetype');
+  src: url('/fuentes/balatro.ttf') format('truetype');
 }
 
 
